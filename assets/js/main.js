@@ -188,3 +188,20 @@
 			});
 
 })(jQuery);
+
+// STYLE THE MOBILE NAVIGATION
+// Add this script to handle the mobile navigation toggle
+
+  const menuBtn = document.querySelector('.menu-toggle');
+  const mobileWrapper = document.querySelector('.site-mobile-nav-wrapper');
+
+  menuBtn.addEventListener('click', () => {
+    mobileWrapper.classList.toggle('menu-open');
+  });
+
+  document.querySelectorAll('.site-mobile-nav a').forEach(link => {
+    link.addEventListener('click', () => {
+      mobileWrapper.classList.remove('menu-open');
+    });
+  });
+
